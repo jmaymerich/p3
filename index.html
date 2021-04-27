@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Dash.js
+        </title>
+        <style>video{width:640px; height:360px;}</style>
+        <script src="https://reference.dashif.org/dash.js/latest/dist/dash.all.debug.js"></script>
+    </head>
+    <body>
+        <div><h1>Parte 1: Introduccion a dash.js</h1></div>
+        <div>
+            <video class="dashjs-player" autoplay controls preload="auto">
+                <source src="https://dash.akamaized.net/envivio/EnvivioDash3/manifest.mpd" type="application/dash+xml"/>
+                </video>
+        </div>
+        <div>
+
+            <p>Integrantes: </p>
+            <p>Jose Maria Aymerich</p>
+            <p>Daniel Albares</p>
+            <p>Andres Delabat</p>
+            <p>Victor Gonzalez</p>
+        </div>
+
+    <script>
+        var player;
+        document.addEventListener("DOMContentLoaded", function () {
+        init();
+        });
+        function init(){
+        player = dashjs.MediaPlayerFactory.create( document.querySelector(".dashjs-player"));
+        };
+    </script>
+    </body>
+</html>
